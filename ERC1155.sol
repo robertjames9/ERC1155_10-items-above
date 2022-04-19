@@ -4,15 +4,15 @@ pragma solidity ^0.8.12;
 import '@openzeppelin/contracts/token/ERC1155/ERC1155.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract SaveUkraineSociety is Ownable, ERC1155 {
+contract Test is Ownable, ERC1155 {
     string private baseURI;
     string public name;
 
     constructor() ERC1155(
-        "https://gateway.pinata.cloud/ipfs/QmYNJnVhj3qLoyrLtxXkehhFfp65WU73Hz2hWsBAjwsEm1/{id}.json"
+        "https://gateway.pinata.cloud/ipfs/<CID>/{id}.json"
         ) 
     {
-        setName("Save Ukraine Children");
+        setName("Test");
     }
     
     function setURI(string memory _newuri) public onlyOwner {
